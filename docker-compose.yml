@@ -3,7 +3,7 @@ services:
 
 
   frappe:
-    image: frappe_pure_dev
+    image: darknetv/frappe_pure_dev
 
     volumes:
       - ./frappe-link:/home/frappe/frappe-link
