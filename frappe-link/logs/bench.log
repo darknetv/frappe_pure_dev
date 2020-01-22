@@ -1,0 +1,5 @@
+2020-01-22 13:04:39,926 INFO getting app justwash-frappe
+2020-01-22 13:04:39,937 INFO git clone -q https://gitlab.com/darknet.v/justwash-frappe.git  --depth 1 --origin upstream
+2020-01-22 13:04:53,769 INFO installing justwash
+2020-01-22 13:04:53,770 INFO ./env/bin/pip install -q -U -e ./apps/justwash 
+2020-01-22 13:04:58,217 INFO bench build --app justwash

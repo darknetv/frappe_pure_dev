@@ -44,6 +44,16 @@ USER frappe
 #COPY --chown=frappe:frappe ./frappe-bench /home/frappe/frappe-bench
 
 
+#bench init frappe-bench --ignore-exist --skip-redis-config-generation --python python2 --frappe-branch https://github.com/darknetv/frappe11-app.git
+
+
+#bench init frappe-bench --ignore-exist --skip-redis-config-generation --python python2  --frappe-branch version-11
+
+#rm -rf /home/frappe/frappe-bench/Procfile 
+#rm -rf /home/frappe/frappe-bench/sites/common_site_config.json 
+# ln -s /home/frappe/frappe-link/Procfile /home/frappe/frappe-bench/Procfile 
+# ln -s /home/frappe/frappe-link/common_site_config.json /home/frappe/frappe-bench/sites/common_site_config.json 
+
 
 WORKDIR /home/frappe/
 

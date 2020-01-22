@@ -50,7 +50,7 @@
 }
 .grid-empty,
 .list-loading {
-  padding: 30px 15px;
+  padding: 10px 15px;
   color: #d1d8dd;
 }
 .grid-static-col,
@@ -126,10 +126,6 @@
 .grid-body .grid-static-col[data-fieldtype="Button"] .field-area button {
   height: 27px;
 }
-.grid-body .grid-static-col[data-fieldtype="Rating"] .field-area {
-  margin-top: 1rem;
-  margin-left: 1rem;
-}
 .grid-body .grid-static-col[data-fieldtype="Code"] {
   overflow: hidden;
 }
@@ -200,37 +196,8 @@
   font-size: 120%;
   border-bottom: 1px solid #d1d8dd;
 }
-.grid-header-toolbar {
-  display: flow-root;
-}
-.grid-buttons {
-  display: inline-flex;
-}
 .grid-footer {
   background-color: #fff;
-  border: 1px solid #d1d8dd;
-  border-top: 0px;
-}
-.grid-pagination {
-  padding: 0;
-}
-.page-text {
-  display: inline-block;
-}
-.prev-page,
-.next-page {
-  font-size: 14px;
-}
-a.prev-page {
-  padding-left: 15px;
-  text-decoration: none;
-}
-a.next-page {
-  padding-right: 15px;
-  text-decoration: none;
-}
-.page-number {
-  padding: 0 3px;
 }
 .grid-footer-toolbar {
   padding: 10px 15px;

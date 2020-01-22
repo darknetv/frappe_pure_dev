@@ -1,21 +1,58 @@
+.user-role {
+  padding: 5px;
+  width: 50%;
+  float: left;
+}
+.role {
+  padding-left: 5px;
+  padding-top: 2px;
+}
+table.user-perm {
+  border-collapse: collapse;
+  width: 100%;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+table.user-perm td,
+table.user-perm th {
+  padding: 5px;
+  text-align: center;
+  border-bottom: 1px solid #aaa;
+  min-width: 30px;
+}
+.module-block-list .checkbox {
+  margin-bottom: 0px;
+}
+.module-block-list .checkbox label {
+  width: 100%;
+}
+
+.tags-list {
+  float: left;
+  width: 100%;
+  padding-left: 3px;
+}
+.tags-input {
+  width: 100px;
+  font-size: 11px;
+  border: none;
+  outline: none;
+}
+.tags-list-item {
+  display: inline-block;
+  margin: 0 5px 5px 0;
+}
+.tags-placeholder {
+  display: inline-block;
+  font-size: 11px;
+}
+
 /* palette colors*/
 .frappe-list .result,
 .frappe-list .no-result,
 .frappe-list .freeze {
   min-height: calc(100vh - 284px);
-}
-.frappe-list .msg-box {
-  margin-bottom: 8em;
-}
-.frappe-list .msg-box .null-state {
-  height: 15rem !important;
-  max-height: 150px;
-  width: auto;
-}
-.frappe-list .msg-box .meta-description {
-  width: 45%;
-  margin-right: auto;
-  margin-left: auto;
 }
 .freeze-row .level-left,
 .freeze-row .level-right,
@@ -37,14 +74,6 @@
   }
   100% {
     opacity: 0.2;
-  }
-}
-@media (min-width: 1199px) {
-  body.no-list-sidebar [data-page-route^="List/"] .layout-side-section {
-    display: none;
-  }
-  body.no-list-sidebar [data-page-route^="List/"] .layout-main-section-wrapper {
-    width: 100% !important;
   }
 }
 .filter-list {
@@ -77,10 +106,6 @@
   border-bottom: 1px solid #d1d8dd;
   display: flex;
   flex-direction: column;
-  outline: none;
-}
-.list-row-container:focus {
-  background-color: #fffce7;
 }
 .list-row {
   padding: 12px 15px;
@@ -221,7 +246,7 @@ input.list-row-checkbox {
 .taggle_list .taggle:hover {
   padding: 2px 15px 2px 4px;
   background: #cfdce5;
-  transition: all 0.2s;
+  transition: all .2s;
 }
 .taggle_list li {
   margin-bottom: 0;
@@ -249,17 +274,14 @@ input.list-row-checkbox {
   border-radius: 5px;
   background: lightyellow;
   color: #6c7680;
-  margin: auto 5px auto auto;
+  margin-left: auto;
   font-size: 10px;
+  margin-top: 3px;
   outline: 0;
 }
 .page-form .restricted-list .octicon {
   padding-right: 5px;
   font-size: 12px;
-}
-.frappe-rtl .restricted-list {
-  margin: auto auto auto 5px;
-  direction: ltr;
 }
 .taggle_input {
   padding: 0;
@@ -285,11 +307,12 @@ input.list-row-checkbox {
 .image-view-container .image-view-item:nth-child(4n) {
   border-right: none;
 }
+.image-view-container .image-view-item:nth-last-child(-n + 4):nth-child(4n + 1),
+.image-view-container .image-view-item:nth-last-child(-n + 4):nth-child(4n + 1) ~ .image-view-item {
+  border-bottom: none;
+}
 .image-view-container .image-view-header {
   margin-bottom: 10px;
-}
-.image-view-container .image-view-info {
-  margin-top: 10px;
 }
 .image-view-container .image-view-body:hover .zoom-view {
   opacity: 0.7;
@@ -304,6 +327,7 @@ input.list-row-checkbox {
   justify-content: center;
   position: relative;
   height: 200px;
+  padding: 15px;
 }
 .image-view-container .image-field img {
   max-height: 100%;
@@ -635,7 +659,7 @@ th.fc-day-header {
   border-left: 3px solid #d9f29e !important;
 }
 .fc-bg-blue {
-  background-color: #eff4ff !important;
+  background-color: #d1d3fc !important;
   color: #4c51a2 !important;
 }
 .fc-bg-blue.fc-start {
@@ -647,36 +671,6 @@ th.fc-day-header {
 }
 .fc-bg-yellow.fc-start {
   border-left: 3px solid #fff5a0 !important;
-}
-
-.user-role {
-  padding: 5px;
-  width: 50%;
-  float: left;
-}
-.role {
-  padding-left: 5px;
-  padding-top: 2px;
-}
-table.user-perm {
-  border-collapse: collapse;
-  width: 100%;
-  overflow-x: scroll;
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-}
-table.user-perm td,
-table.user-perm th {
-  padding: 5px;
-  text-align: center;
-  border-bottom: 1px solid #aaa;
-  min-width: 30px;
-}
-.module-block-list .checkbox {
-  margin-bottom: 0px;
-}
-.module-block-list .checkbox label {
-  width: 100%;
 }
 
 /* palette colors*/
@@ -691,24 +685,4 @@ table.user-perm th {
 }
 .frappe-rtl .gantt {
   direction: ltr;
-}
-
-.tags-list {
-  float: left;
-  width: 100%;
-  padding-left: 3px;
-}
-.tags-input {
-  width: 100px;
-  font-size: 11px;
-  border: none;
-  outline: none;
-}
-.tags-list-item {
-  display: inline-block;
-  margin: 0 5px 5px 0;
-}
-.tags-placeholder {
-  display: inline-block;
-  font-size: 11px;
 }

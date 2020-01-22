@@ -1583,9 +1583,7 @@ ul.tree-children {
 .data-table {
   direction: ltr;
 }
-.section-header {
-  direction: ltr;
-}
+
 .grid-report {
   direction: ltr;
 }

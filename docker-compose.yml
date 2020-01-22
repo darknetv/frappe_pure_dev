@@ -3,8 +3,9 @@ services:
 
 
   frappe:
-    image: darknetv/frappe_pure_dev
-
+    #build: .
+    image:  darknetv/frappe11_pure_dev
+    
     volumes:
       - ./frappe-link:/home/frappe/frappe-link
       - ./frappe-link/logs:/home/frappe/frappe-bench/logs
